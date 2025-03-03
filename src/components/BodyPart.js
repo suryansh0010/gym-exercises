@@ -13,10 +13,15 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
       sx={{
         borderTop: bodyPart === item ? '4px solid #ff2625' : '', 
         backgroundColor: bodyPart === item ? '#fff' : '',
+        borderBottomLeftRadius: bodyPart === item ? '20px' : '',
+        width: bodyPart === item ? '270px' : '',
+        height: bodyPart === item ? '280px' : '',
+        cursor: bodyPart === item ? 'pointer' : '',
+        gap: bodyPart === item ? '47px' : '',
       }}
       onClick={() => setBodyPart(item)}
     >
-      <img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }} />
+      <img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }}/>
     </Stack>
   );
 };
