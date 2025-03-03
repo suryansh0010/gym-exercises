@@ -1,22 +1,24 @@
-import React from 'react'
-import {Stack} from '@mui/material';
-import Icon from '../assets/icons/gym.png'
+import React from 'react';
+import { Stack } from '@mui/material';
+import Icon from '../assets/icons/gym.png';
 
+const BodyPart = ({ item, setBodyPart, bodyPart }) => {
 
-const BodyPart = ({item,setBodyPart,BodyPart}) => {
   return (
-    <Stack 
+    <Stack
       type="button"
-      alignItems='center'
+      alignItems="center"
       justifyContent="center"
-      className='bodyPart-card'
+      className="bodyPart-card"
       sx={{
-
+        borderTop: bodyPart === item ? '4px solid #ff2625' : '', 
+        backgroundColor: bodyPart === item ? '#fff' : '',
       }}
+      onClick={() => setBodyPart(item)}
     >
-      <img src={Icon} alt='dumbbell' style={{width:'40px',height:'40px'}}/>
+      <img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }} />
     </Stack>
-  )
-}
+  );
+};
 
-export default BodyPart
+export default BodyPart;
