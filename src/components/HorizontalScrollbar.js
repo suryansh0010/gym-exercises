@@ -1,25 +1,23 @@
-import React from 'react'
-import {Box} from '@mui/material'
-import BodyPart from './BodyPart'
+import React from 'react';
+import { Box } from '@mui/material';
+import BodyPart from './BodyPart';
 
-
-const HorizontalScrollbar = ({data,bodyPart,setBodyPart}) => {
+const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
   return (
-    <div>
-      {data.map((item)=>(
+    <Box sx={{ display: 'flex', overflowX: 'auto', p: 2 }}>
+      {data.map((item) => (
         <Box
-        key={item.id || item}
-        itemId={item.id || item}
-        title={item.id || item}
-        m="0 40px"
+          key={item.id || item}
+          itemId={item.id || item}
+          title={item.id || item}
+          m="0 40px"
+          sx={{ flex: '0 0 auto' }} // Ensures items don't shrink and stay in a row
         >
-            <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
+          <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
         </Box>
-      ))
+      ))}
+    </Box>
+  );
+};
 
-      }
-    </div>
-  )
-}
-
-export default HorizontalScrollbar
+export default HorizontalScrollbar;
