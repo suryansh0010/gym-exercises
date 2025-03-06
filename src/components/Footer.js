@@ -11,4 +11,4 @@ const Footer = () => (
   </Box>
 );
 
-export default Footer;
+export default Footer; 
