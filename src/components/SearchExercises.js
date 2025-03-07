@@ -83,3 +83,4 @@ const SearchExercises = ({setExercises,bodyPart,setBodyPart}) => {
 };
 
 export default SearchExercises;
+ 
